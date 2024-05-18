@@ -81,17 +81,20 @@ export const unitConverterStyles = StyleSheet.create({
   pickerButtonText: {
     fontSize: 16,
   },
-  selectedPickerButton: {
-    backgroundColor: '#ff9800', // Highlight color for selected unit
+  selectedPickerButtonFrom: {
+    backgroundColor: '#ff9800', // Highlight color for selected "from" unit
+  },
+  selectedPickerButtonTo: {
+    backgroundColor: '#4CAF50', // Highlight color for selected "to" unit
   },
   convertButtonLight: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#1b62e7',
     padding: 15,
     alignItems: 'center',
     borderRadius: 10,
   },
   convertButtonDark: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#1b62e7',
     padding: 15,
     alignItems: 'center',
     borderRadius: 10,

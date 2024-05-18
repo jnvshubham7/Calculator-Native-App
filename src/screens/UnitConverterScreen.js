@@ -66,7 +66,7 @@ const UnitConverterScreen = () => {
               key={unit}
               style={[
                 styles.pickerButton,
-                fromUnit === unit && styles.selectedPickerButton, // Apply selected style if this unit is selected
+                fromUnit === unit && styles.selectedPickerButtonFrom, // Apply selected "from" style if this unit is selected as fromUnit
               ]}
               onPress={() => setFromUnit(unit)}
             >
@@ -84,7 +84,7 @@ const UnitConverterScreen = () => {
               key={unit}
               style={[
                 styles.pickerButton,
-                toUnit === unit && styles.selectedPickerButton, // Apply selected style if this unit is selected
+                toUnit === unit && styles.selectedPickerButtonTo, // Apply selected "to" style if this unit is selected as toUnit
               ]}
               onPress={() => setToUnit(unit)}
             >
