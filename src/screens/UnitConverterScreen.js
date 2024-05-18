@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Switch, Button } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Switch } from 'react-native';
 import { ThemeContext } from '../context/ThemeContext';
 import { units } from '../utils/units';
 import { unitConverterStyles as styles } from '../styles/unitConverterStyles';
 
-const UnitConverterScreen = ({ navigation }) => {
+const UnitConverterScreen = () => {
   const [category, setCategory] = useState('length');
   const [fromUnit, setFromUnit] = useState('');
   const [toUnit, setToUnit] = useState('');
@@ -102,11 +102,6 @@ const UnitConverterScreen = ({ navigation }) => {
       >
         {result || 'Converted result will appear here'}
       </Text>
-
-      <Button
-        title="Go to Calculator"
-        onPress={() => navigation.navigate('Calculator')}
-      />
     </View>
   );
 };

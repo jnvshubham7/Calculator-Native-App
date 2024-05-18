@@ -1,10 +1,9 @@
-// CalculatorScreen.js
 import React, { useContext, useState } from 'react';
-import { View, Text, TouchableOpacity, Switch, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Switch } from 'react-native';
 import { ThemeContext } from '../context/ThemeContext';
 import { calculatorStyles as styles } from '../styles/calculatorStyles';
 
-const CalculatorScreen = ({ navigation }) => {
+const CalculatorScreen = () => {
   const [result, setResult] = useState('');
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
 
@@ -54,10 +53,6 @@ const CalculatorScreen = ({ navigation }) => {
           </TouchableOpacity>
         ))}
       </View>
-      <Button
-        title="Go to Unit Converter"
-        onPress={() => navigation.navigate('UnitConverter')}
-      />
     </View>
   );
 };

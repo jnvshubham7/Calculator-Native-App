@@ -1,23 +1,28 @@
 import React, { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-i
-
-import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { ThemeContext } from '../context/ThemeContext';
 import CalculatorScreen from '../screens/CalculatorScreen';
 import UnitConverterScreen from '../screens/UnitConverterScreen';
 
-const Stack = createStackNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 const AppNavigator = () => {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <NavigationContainer theme={isDarkMode ? darkTheme : lightTheme}>
-      <Stack.Navigator initialRouteName="Calculator">
-        <Stack.Screen name="Calculator" component={CalculatorScreen} />
-        <Stack.Screen name="UnitConverter" component={UnitConverterScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator
+        initialRouteName="Calculator"
+        screenOptions={{
+          tabBarIndicatorStyle: { backgroundColor: isDarkMode ? '#ffffff' : '#000000' },
+          tabBarStyle: { backgroundColor: isDarkMode ? '#1f1f1f' : '#ffffff' },
+          tabBarLabelStyle: { color: isDarkMode ? '#ffffff' : '#000000' },
+        }}
+      >
+        <Tab.Screen name="Calculator" component={CalculatorScreen} />
+        <Tab.Screen name="UnitConverter" component={UnitConverterScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
