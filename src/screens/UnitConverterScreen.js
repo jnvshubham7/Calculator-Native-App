@@ -39,8 +39,13 @@ const UnitConverterScreen = () => {
 
   return (
     <View style={isDarkMode ? styles.containerDark : styles.containerLight}>
+      <View style={styles.switchContainer}>
+        <Switch value={isDarkMode} onValueChange={toggleDarkMode} />
+        <Text style={isDarkMode ? styles.switchTextDark : styles.switchTextLight}>
+          {isDarkMode ? 'Dark Mode' : 'Light Mode'}
+        </Text>
+      </View>
       <Text style={isDarkMode ? styles.headerDark : styles.headerLight}>Unit Converter</Text>
-      <Switch value={isDarkMode} onValueChange={toggleDarkMode} />
 
       <View style={styles.inputContainer}>
         <TextInput
