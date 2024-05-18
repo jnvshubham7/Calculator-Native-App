@@ -33,24 +33,20 @@ const CalculatorScreen = () => {
 
   return (
     <View style={isDarkMode ? styles.containerDark : styles.containerLight}>
-      <Text style={isDarkMode ? styles.resultDark : styles.resultLight}>{result}</Text>
+      <Switch value={isDarkMode} onValueChange={toggleDarkMode} style={styles.switchStyle} />
+      <View style={styles.resultContainer}>
+        <Text style={isDarkMode ? styles.resultDark : styles.resultLight}>{result}</Text>
+      </View>
       <View style={styles.buttonContainer}>
         {buttons.flat().map((button) => (
           <TouchableOpacity
             key={button}
-            style={
-              button === 'AC'
-                ? isDarkMode
-                  ? [styles.buttonDark, styles.acButtonDark]
-                  : [styles.buttonLight, styles.acButtonLight]
-                : button === '='
-                ? isDarkMode
-                  ? [styles.buttonDark, styles.equalButtonDark]
-                  : [styles.buttonLight, styles.equalButtonLight]
-                : isDarkMode
-                ? styles.buttonDark
-                : styles.buttonLight
-            }
+            style={[
+              styles.button,
+              isDarkMode ? styles.buttonDark : styles.buttonLight,
+              button === 'AC' && (isDarkMode ? styles.acButtonDark : styles.acButtonLight),
+              button === '=' && (isDarkMode ? styles.equalButtonDark : styles.equalButtonLight),
+            ]}
             onPress={() => handleButtonPress(button)}
           >
             <Text style={isDarkMode ? styles.buttonTextDark : styles.buttonTextLight}>{button}</Text>

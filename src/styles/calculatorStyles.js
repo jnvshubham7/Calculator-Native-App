@@ -5,13 +5,21 @@ export const calculatorStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
     padding: 20,
+    justifyContent: 'flex-end',
   },
   containerDark: {
     flex: 1,
     backgroundColor: '#1f1f1f',
     padding: 20,
+    justifyContent: 'flex-end',
   },
-  
+  switchStyle: {
+    alignSelf: 'flex-end',
+    marginBottom: 10,
+  },
+  resultContainer: {
+    marginBottom: 20, // Adjust this to give space above the result
+  },
   resultLight: {
     fontSize: 40,
     color: '#000000',
@@ -33,21 +41,19 @@ export const calculatorStyles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  buttonLight: {
-    width: '22%',
-    marginVertical: 8,
-    backgroundColor: '#f0f0f0',
-    padding: 20,
-    borderRadius: 10,
+  button: {
+    width: 70, // Set width to ensure the buttons are circular
+    height: 70, // Set height to ensure the buttons are circular
+    margin: 5, // Adjust margin for spacing
+    borderRadius: 35, // Ensure the borderRadius is half of the width/height for a circle
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonLight: {
+    backgroundColor: '#f0f0f0',
   },
   buttonDark: {
-    width: '22%',
-    marginVertical: 8,
     backgroundColor: '#333333',
-    padding: 20,
-    borderRadius: 10,
-    alignItems: 'center',
   },
   equalButtonLight: {
     backgroundColor: '#ff6347',
