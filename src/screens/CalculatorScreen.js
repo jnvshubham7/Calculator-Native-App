@@ -9,26 +9,30 @@ const CalculatorScreen = () => {
 
   const handleButtonPress = (value) => {
     if (value === '=') {
-      setResult(eval(result).toString());
+      try {
+        setResult(eval(result).toString());
+      } catch (error) {
+        setResult('Error');
+      }
     } else if (value === 'AC') {
       setResult('');
+    } else if (value === '⌫') {
+      setResult(result.slice(0, -1));
     } else {
       setResult(result + value);
     }
   };
 
   const buttons = [
-    ['7', '8', '9', '/'],
-    ['4', '5', '6', '*'],
-    ['1', '2', '3', '-'],
-    ['0', '.', '=', '+'],
-    ['AC']
+    ['AC', '%', '⌫', '/'],
+    ['7', '8', '9', '*'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['00', '0', '.', '=']
   ];
 
   return (
     <View style={isDarkMode ? styles.containerDark : styles.containerLight}>
-      <Text style={isDarkMode ? styles.headerDark : styles.headerLight}>Calculator</Text>
-      <Switch value={isDarkMode} onValueChange={toggleDarkMode} />
       <Text style={isDarkMode ? styles.resultDark : styles.resultLight}>{result}</Text>
       <View style={styles.buttonContainer}>
         {buttons.flat().map((button) => (
