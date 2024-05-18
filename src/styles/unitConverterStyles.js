@@ -28,18 +28,6 @@ export const unitConverterStyles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 16,
   },
-  headerLight: {
-    fontSize: 30,
-    color: '#000000',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  headerDark: {
-    fontSize: 30,
-    color: '#ffffff',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
   inputContainer: {
     marginBottom: 20,
   },

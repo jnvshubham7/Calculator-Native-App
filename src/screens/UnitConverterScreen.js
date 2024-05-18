@@ -45,7 +45,6 @@ const UnitConverterScreen = () => {
           {isDarkMode ? 'Dark Mode' : 'Light Mode'}
         </Text>
       </View>
-      <Text style={isDarkMode ? styles.headerDark : styles.headerLight}>Unit Converter</Text>
 
       <View style={styles.inputContainer}>
         <TextInput
