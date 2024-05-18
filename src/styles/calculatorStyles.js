@@ -13,9 +13,22 @@ export const calculatorStyles = StyleSheet.create({
     padding: 20,
     justifyContent: 'flex-end',
   },
-  switchStyle: {
-    alignSelf: 'flex-end',
-    marginBottom: 10,
+  switchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 10,
+    left: 10,
+  },
+  switchTextLight: {
+    marginLeft: 10,
+    color: '#000000',
+    fontSize: 16,
+  },
+  switchTextDark: {
+    marginLeft: 10,
+    color: '#ffffff',
+    fontSize: 16,
   },
   resultContainer: {
     marginBottom: 20, // Adjust this to give space above the result

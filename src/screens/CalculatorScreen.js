@@ -33,7 +33,12 @@ const CalculatorScreen = () => {
 
   return (
     <View style={isDarkMode ? styles.containerDark : styles.containerLight}>
-      <Switch value={isDarkMode} onValueChange={toggleDarkMode} style={styles.switchStyle} />
+      <View style={styles.switchContainer}>
+        <Switch value={isDarkMode} onValueChange={toggleDarkMode} />
+        <Text style={isDarkMode ? styles.switchTextDark : styles.switchTextLight}>
+          {isDarkMode ? 'Dark Mode' : 'Light Mode'}
+        </Text>
+      </View>
       <View style={styles.resultContainer}>
         <Text style={isDarkMode ? styles.resultDark : styles.resultLight}>{result}</Text>
       </View>
