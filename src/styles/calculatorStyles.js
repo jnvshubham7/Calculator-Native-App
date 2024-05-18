@@ -11,6 +11,7 @@ export const calculatorStyles = StyleSheet.create({
     backgroundColor: '#1f1f1f',
     padding: 20,
   },
+  
   resultLight: {
     fontSize: 40,
     color: '#000000',
