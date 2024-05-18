@@ -104,7 +104,7 @@ const UnitConverterScreen = () => {
           !result && styles.placeholderTextColor, // Apply different color if result is empty
         ]}
       >
-        {result || 'Converted result will appear here'}
+        {result }
       </Text>
     </View>
   );
