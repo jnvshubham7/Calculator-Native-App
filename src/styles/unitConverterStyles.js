@@ -82,7 +82,7 @@ export const unitConverterStyles = StyleSheet.create({
     fontSize: 16,
   },
   selectedPickerButton: {
-    backgroundColor: '#aaaaaa',
+    backgroundColor: '#ff9800', // Highlight color for selected unit
   },
   convertButtonLight: {
     backgroundColor: '#4CAF50',
