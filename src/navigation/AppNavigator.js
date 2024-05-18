@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+
 import { createStackNavigator } from '@react-navigation/stack';
 import { ThemeContext } from '../context/ThemeContext';
 import CalculatorScreen from '../screens/CalculatorScreen';

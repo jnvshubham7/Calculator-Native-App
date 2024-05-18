@@ -76,6 +76,9 @@ export const unitConverterStyles = StyleSheet.create({
     backgroundColor: '#f0f0f0',
     borderRadius: 8,
   },
+  selectedPickerButton: {
+    backgroundColor: '#ffd700', // Highlight color for selected unit
+  },
   pickerButtonText: {
     fontSize: 16,
     color: '#000000',
@@ -110,5 +113,7 @@ export const unitConverterStyles = StyleSheet.create({
     fontSize: 25,
     marginTop: 20,
   },
+  placeholderTextColor: {
+    color: '#888888', // Color for placeholder text
+  },
 });
-

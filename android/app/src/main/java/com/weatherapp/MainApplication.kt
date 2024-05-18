@@ -1,4 +1,4 @@
-package com.weatherapp
+package com.calculatorNativeApp
 
 import android.app.Application
 import com.facebook.react.PackageList

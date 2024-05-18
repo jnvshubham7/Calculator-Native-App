@@ -32,7 +32,7 @@ const UnitConverterScreen = ({ navigation }) => {
       const fromValue = parseFloat(value);
       const fromFactor = units[category][fromUnit];
       const toFactor = units[category][toUnit];
-      convertedValue = (fromValue / fromFactor) * toFactor;
+      convertedValue = (fromValue * fromFactor) / toFactor;
     }
     setResult(convertedValue.toString());
   };
@@ -57,11 +57,15 @@ const UnitConverterScreen = ({ navigation }) => {
       <View style={styles.pickerContainer}>
         <Text style={isDarkMode ? styles.labelDark : styles.labelLight}>From:</Text>
         <View style={styles.picker}>
-          <TouchableOpacity style={styles.pickerButton} onPress={() => setFromUnit('')}>
-            <Text style={styles.pickerButtonText}>Select Unit</Text>
-          </TouchableOpacity>
           {Object.keys(units[category]).map((unit) => (
-            <TouchableOpacity key={unit} style={styles.pickerButton} onPress={() => setFromUnit(unit)}>
+            <TouchableOpacity
+              key={unit}
+              style={[
+                styles.pickerButton,
+                fromUnit === unit && styles.selectedPickerButton, // Apply selected style if this unit is selected
+              ]}
+              onPress={() => setFromUnit(unit)}
+            >
               <Text style={styles.pickerButtonText}>{unit}</Text>
             </TouchableOpacity>
           ))}
@@ -71,11 +75,15 @@ const UnitConverterScreen = ({ navigation }) => {
       <View style={styles.pickerContainer}>
         <Text style={isDarkMode ? styles.labelDark : styles.labelLight}>To:</Text>
         <View style={styles.picker}>
-          <TouchableOpacity style={styles.pickerButton} onPress={() => setToUnit('')}>
-            <Text style={styles.pickerButtonText}>Select Unit</Text>
-          </TouchableOpacity>
           {Object.keys(units[category]).map((unit) => (
-            <TouchableOpacity key={unit} style={styles.pickerButton} onPress={() => setToUnit(unit)}>
+            <TouchableOpacity
+              key={unit}
+              style={[
+                styles.pickerButton,
+                toUnit === unit && styles.selectedPickerButton, // Apply selected style if this unit is selected
+              ]}
+              onPress={() => setToUnit(unit)}
+            >
               <Text style={styles.pickerButtonText}>{unit}</Text>
             </TouchableOpacity>
           ))}
@@ -86,7 +94,14 @@ const UnitConverterScreen = ({ navigation }) => {
         <Text style={isDarkMode ? styles.convertButtonTextDark : styles.convertButtonTextLight}>Convert</Text>
       </TouchableOpacity>
 
-      <Text style={isDarkMode ? styles.resultTextDark : styles.resultTextLight}>{result}</Text>
+      <Text
+        style={[
+          isDarkMode ? styles.resultTextDark : styles.resultTextLight,
+          !result && styles.placeholderTextColor, // Apply different color if result is empty
+        ]}
+      >
+        {result || 'Converted result will appear here'}
+      </Text>
 
       <Button
         title="Go to Calculator"
