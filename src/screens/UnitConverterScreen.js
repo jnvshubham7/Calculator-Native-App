@@ -26,8 +26,16 @@ const UnitConverterScreen = () => {
 
     let convertedValue;
     if (category === 'temperature') {
-      // Temperature conversion logic
-      // Add your temperature conversion logic here
+      if (fromUnit === 'Celsius' && toUnit === 'Fahrenheit') {
+        convertedValue = (parseFloat(value) * 9) / 5 + 32;
+      } else if (fromUnit === 'Fahrenheit' && toUnit === 'Celsius') {
+        convertedValue = ((parseFloat(value) - 32) * 5) / 9;
+      } else {
+        convertedValue = parseFloat(value);
+      }
+
+
+     
     } else {
       const fromValue = parseFloat(value);
       const fromFactor = units[category][fromUnit];
@@ -46,17 +54,19 @@ const UnitConverterScreen = () => {
         </Text>
       </View>
 
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={isDarkMode ? styles.inputDark : styles.inputLight}
-          placeholder="Enter value"
-          placeholderTextColor="#888"
-          keyboardType="numeric"
-          value={value}
-          onChangeText={setValue}
-        />
-        <Text style={isDarkMode ? styles.errorTextDark : styles.errorTextLight}>{error}</Text>
-      </View>
+      <View style={[styles.inputContainer, isDarkMode && styles.inputContainerDark]}>
+      <TextInput
+        style={[styles.input, isDarkMode ? styles.inputDark : styles.inputLight]}
+        placeholder="Enter value"
+        placeholderTextColor="#888"
+        keyboardType="numeric"
+        value={value}
+        onChangeText={setValue}
+      />
+      <Text style={[styles.errorText, isDarkMode ? styles.errorTextDark : styles.errorTextLight]}>
+        {error}
+      </Text>
+    </View>
 
       <View style={styles.pickerContainer}>
         <Text style={isDarkMode ? styles.labelDark : styles.labelLight}>From:</Text>

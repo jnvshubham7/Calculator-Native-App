@@ -21,7 +21,7 @@ const AppNavigator = () => {
         }}
       >
         <Tab.Screen name="Calculator" component={CalculatorScreen} />
-        <Tab.Screen name="UnitConverter" component={UnitConverterScreen} />
+        <Tab.Screen name="Unit_Converter" component={UnitConverterScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -30,7 +30,38 @@ export const unitConverterStyles = StyleSheet.create({
   },
   inputContainer: {
     marginBottom: 20,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
   },
+  inputContainerDark: {
+    backgroundColor: '#333',
+    borderColor: '#555',
+  },
+  input: {
+    fontSize: 16,
+    color: '#333',
+  },
+  inputLight: {
+    backgroundColor: '#f5f5f5',
+  },
+  inputDark: {
+    backgroundColor: '#444',
+    color: '#fff',
+  },
+  errorText: {
+    color: 'red',
+    marginTop: 5,
+  },
+  errorTextLight: {
+    color: 'red',
+  },
+  errorTextDark: {
+    color: '#ff7f7f',
+  },
+
   inputLight: {
     fontSize: 18,
     color: '#000000',
