@@ -11,11 +11,11 @@ This React Native application serves as a unit converter and calculator, allowin
 ## Screenshots
 
 <p float="left">
-  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/c41bfd21-ff41-4377-802c-98b774f4d314" width="400" />
-  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/789e605e-6951-4902-ab43-678e0e47c5d2" width="400" />
-  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/3da212a4-c84f-4490-996c-f081d80b3f5a" width="400" />
+  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/c41bfd21-ff41-4377-802c-98b774f4d314" width="200" />
+  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/789e605e-6951-4902-ab43-678e0e47c5d2" width="200" />
+  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/3da212a4-c84f-4490-996c-f081d80b3f5a" width="200" />
  
-  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/6d4e86c9-a1b1-4592-afb1-f175736014ef" width="400" />
+  <img src="https://github.com/jnvshubham7/Calculator-Native-App/assets/69629803/6d4e86c9-a1b1-4592-afb1-f175736014ef" width="200" />
 
 </p>
 
